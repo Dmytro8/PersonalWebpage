@@ -14,6 +14,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import { Link } from "react-scroll";
 import { LanguageBar } from "../LanguageBar";
+import { SocialBar } from "../SocialBar";
 
 type DrawerProps = {
   open: boolean;
@@ -24,7 +25,8 @@ const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
   return (
     <DrawerBody>
       <DrawerBar>
-        <DrawerSocialBar>
+        <SocialBar size="big" inDrawer={true} />
+        {/* <DrawerSocialBar>
           <DrawerLink
             href="https://www.facebook.com/dm.patalakha/"
             target="_blank"
@@ -40,7 +42,7 @@ const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
           >
             <LinkedInIcon />
           </DrawerLink>
-        </DrawerSocialBar>
+        </DrawerSocialBar> */}
         <DrawerNavbar>
           <DrawerNavList>
             <DrawerNavItem>

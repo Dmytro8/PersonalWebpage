@@ -25,8 +25,7 @@ const Header: FC<HeaderPropsType> = ({ theme, toggleTheme, open, setOpen }) => {
   const scrollY = useScroll();
 
   useEffect(() => {
-    console.log(scrollY);
-    if (scrollY > 100) setSize("small");
+    if (scrollY > 300) setSize("small");
     else setSize("big");
     return () => {};
   }, [scrollY]);

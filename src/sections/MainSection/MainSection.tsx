@@ -3,7 +3,15 @@ import { Header } from "../../components/Header";
 // @ts-ignore
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 import { Drawer } from "../../components/Drawer";
-import { MainSectionContainer } from "./MainSection.styled";
+import {
+  MainSectionContainer,
+  MainContent,
+  FixedBar,
+  FixedBarContainer
+} from "./MainSection.styled";
+import { Greeting } from "../../components/Greeting";
+import { SocialBar } from "../../components/SocialBar";
+import { ScrollArrow } from "../../components/ScrollArrow";
 
 type MainSectionPropsType = {
   theme: string;
@@ -36,7 +44,15 @@ const MainSection: FC<MainSectionPropsType> = ({ theme, toggleTheme }) => {
           open={open}
           setOpen={setOpen}
         />
-        MainSection
+        <MainContent>
+          <Greeting />
+          <FixedBar>
+            <FixedBarContainer>
+              <SocialBar size="small" inDrawer={false} />
+              <ScrollArrow />
+            </FixedBarContainer>
+          </FixedBar>
+        </MainContent>
       </MainSectionContainer>
       <SwipeableDrawer
         anchor={"top"}

@@ -7,6 +7,7 @@ import { AboutSection } from "../sections/AboutSection";
 import { PortfolioSection } from "../sections/PortfolioSection";
 import { ContactSection } from "../sections/ContactSection";
 import { useDarkMode } from "../hooks/useDarkMode";
+import { Background } from "../styles/common";
 
 function App() {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -18,6 +19,7 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <>
+        <Background theme={theme} />
         <MainSection theme={theme} toggleTheme={toggleTheme} />
         <AboutSection />
         <PortfolioSection />

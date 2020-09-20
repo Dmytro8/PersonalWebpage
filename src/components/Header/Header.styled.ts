@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { OuterContainer } from "../../styles/common";
 
 type HeaderProps = {
   size: string;
@@ -18,11 +19,7 @@ export const HeaderBody = styled.header`
   transition: height 0.3s;
 `;
 
-export const HeaderContainer = styled.div`
-  width: 90vw;
-  display: grid;
-  justify-self: center;
-  align-content: center;
+export const HeaderContainer = styled(OuterContainer)`
   grid-auto-flow: column;
   grid-template-columns: 1fr auto 1fr;
   @media screen and (max-width: 800px) {
