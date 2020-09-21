@@ -11,4 +11,5 @@ export const ButtonBody = styled.button`
   border: none;
   cursor: pointer;
   filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
+  font-weight: bold;
 `;

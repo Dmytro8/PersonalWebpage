@@ -23,7 +23,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${(props: GlobalStylesType) => props.theme.body};
     color: ${(props: GlobalStylesType) => props.theme.text};
-    transition: all 0.25s linear;
+    /* transition: all 0.1s; */
   }
   section{
     min-height: 100vh;

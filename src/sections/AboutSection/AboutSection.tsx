@@ -12,6 +12,7 @@ import {
 } from "./AboutSection.styled";
 import { Title } from "../../components/Title";
 import { Button } from "../../components/Button";
+import CV from "../../static/CV_Patalakha_Dmytro.pdf";
 
 const AboutSection = () => {
   return (
@@ -37,10 +38,7 @@ const AboutSection = () => {
           Need more information about my skills? Download the CV.
         </AboutSectionMoreText>
         <Button text="Download CV">
-          <AboutSectionDownload
-            href="../src/static/CV_Patalakha_Dmytro.pdf"
-            download
-          >
+          <AboutSectionDownload href={CV} download>
             Download CV
           </AboutSectionDownload>
         </Button>

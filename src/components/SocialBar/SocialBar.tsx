@@ -1,9 +1,5 @@
 import React, { FC } from "react";
-import {
-  SocialLink,
-  SocialBarDiv,
-  SocialBarContainer
-} from "./SocialBar.styled";
+import { SocialLink, SocialBarDiv } from "./SocialBar.styled";
 
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";

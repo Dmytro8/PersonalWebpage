@@ -6,7 +6,6 @@ export const AboutSectionContainer = styled.section`
   justify-content: center;
   align-items: start;
   grid-template-rows: 3fr 1fr;
-  /* gap: 20px; */
   @media screen and (max-width: 800px) {
     gap: 100px;
   }
@@ -18,6 +17,7 @@ export const AboutSectionContainer = styled.section`
 export const AboutSectionDescription = styled(InnerContainer)`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-top: 70px;
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
