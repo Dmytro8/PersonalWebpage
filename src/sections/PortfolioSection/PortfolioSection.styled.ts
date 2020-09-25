@@ -20,7 +20,7 @@ export const PorfolioSectionContainer = styled(InnerContainer)`
 export const PortfolioWrapper = styled.div`
   width: inherit;
   margin-top: 80px;
-  z-index: 1650;
+  /* z-index: 1650; */
   .slick-slide,
   .slick-active,
   .slick-list {
@@ -79,8 +79,9 @@ export const ProjectAbout = styled.p`
   margin-top: 0;
   text-align: center;
   font-size: calc(16px + 0.5vw);
+  font-weight: 300;
   line-height: 30px;
-  color: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.textOpacity};
   padding: 0 100px;
   margin: 20px 0;
   @media screen and (max-width: 800px) {

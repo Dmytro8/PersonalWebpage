@@ -32,7 +32,7 @@ type SocialLinkProps = {
 };
 export const SocialLink = styled.a<SocialLinkProps>`
   color: ${({ theme, inDrawer }) =>
-    inDrawer ? theme.text : theme.text + "7F"};
+    inDrawer ? theme.text : theme.textOpacity};
 `;
 
 export const SocialBarContainer = styled(OuterContainer)`

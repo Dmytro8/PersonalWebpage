@@ -6,6 +6,7 @@ export const AboutSectionContainer = styled.section`
   justify-content: center;
   align-items: start;
   grid-template-rows: 3fr 1fr;
+  gap: 100px;
   @media screen and (max-width: 800px) {
     gap: 100px;
   }
@@ -27,6 +28,7 @@ export const AboutSectionDescription = styled(InnerContainer)`
 export const AboutSectionMore = styled(InnerContainer)`
   display: grid;
   gap: 20px;
+  /* padding: 50px 0 100px 0; */
   @media screen and (max-width: 800px) {
     gap: 10px;
   }
@@ -46,6 +48,7 @@ export const AboutSectionText = styled.p`
   text-align: justify;
   font-size: calc(14px + 0.5vw);
   line-height: 28px;
+  font-weight: 300;
 `;
 
 export const AboutSectionSignature = styled.p`

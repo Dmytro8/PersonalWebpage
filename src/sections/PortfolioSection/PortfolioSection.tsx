@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -26,11 +26,6 @@ import { Button } from "../../components/Button";
 
 const PortfolioSection = () => {
   const [projectIndex, setProjectIndex] = useState(0);
-
-  useEffect(() => {
-    console.log(projectIndex);
-    return () => {};
-  }, [projectIndex]);
   const settings = {
     className: "center",
     centerMode: true,
@@ -80,7 +75,7 @@ const PortfolioSection = () => {
         <ProjectDescription>
           <ProjectName>{projects[projectIndex].name}</ProjectName>
           <ProjectAbout>{projects[projectIndex].description}</ProjectAbout>
-          <Button text="View Project">
+          <Button text="View Project" size="medium">
             <ProjectView href={projects[projectIndex].github} target="_blank">
               View Project
             </ProjectView>

@@ -3,15 +3,16 @@ import { ButtonBody } from "./Button.styled";
 
 type ButtonProps = {
   text: string;
+  size: "small" | "medium" | "big";
   children?: React.ReactNode;
 };
-const Button: FC<ButtonProps> = ({ text, children }) => {
+const Button: FC<ButtonProps> = ({ text, children, size }) => {
   return (
     <>
       {children ? (
-        <ButtonBody>{children}</ButtonBody>
+        <ButtonBody size={size}>{children}</ButtonBody>
       ) : (
-        <ButtonBody>{text}</ButtonBody>
+        <ButtonBody size={size}>{text}</ButtonBody>
       )}
     </>
   );

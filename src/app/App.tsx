@@ -23,7 +23,7 @@ function App() {
         <MainSection theme={theme} toggleTheme={toggleTheme} />
         <AboutSection />
         <PortfolioSection />
-        <ContactSection />
+        <ContactSection theme={theme} />
       </>
     </ThemeProvider>
   );

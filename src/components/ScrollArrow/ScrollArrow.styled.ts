@@ -13,7 +13,7 @@ export const ScrollArrowWrapper = styled.div`
 export const ScrollRail = styled.span`
   width: 1px;
   height: 100%;
-  background: ${({ theme }) => theme.text + "7F"};
+  background: ${({ theme }) => theme.textOpacity};
 `;
 
 type ScrollArrowTextProps = {
@@ -30,7 +30,7 @@ export const ScrollArrowText = styled.p<ScrollArrowTextProps>`
   height: 14px;
   letter-spacing: 0.05em;
   font-size: 16px;
-  color: ${({ theme }) => theme.text + "7F"};
+  color: ${({ theme }) => theme.textOpacity};
   padding: 0 5px;
   display: grid;
   grid-auto-flow: column;

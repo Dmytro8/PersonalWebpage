@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import {
   GreetingContainer,
   GreetingBody,
@@ -26,7 +27,11 @@ const Greeting = () => {
         <GreetingDeveloper>
           I can translate all your ideas into reality!
         </GreetingDeveloper>
-        <Button text="Contact me" />
+        <Button text="Contact me" size="big">
+          <Link to="contact" spy={true} smooth={true} duration={500}>
+            Contact me
+          </Link>
+        </Button>
       </GreetingContainer>
     </GreetingBody>
   );

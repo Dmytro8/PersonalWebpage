@@ -15,7 +15,26 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
+    scrollbar-width: thin;
+    scrollbar-color: ${(props: GlobalStylesType) =>
+      `${props.theme.accent} ${props.theme.body}`};
+    
+    &::selection {
+      background-color: ${(props: GlobalStylesType) => props.theme.accent};
+      color: ${(props: GlobalStylesType) => props.theme.body};
+    }
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: ${(props: GlobalStylesType) => props.theme.body};
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${(props: GlobalStylesType) => props.theme.body};
+      border: 4px solid ${(props: GlobalStylesType) => props.theme.accent};
+    }
   }
+    /* font-family: 'Jost', sans-serif;  } */
   html{
     scroll-behavior: smooth;
   }
@@ -23,9 +42,10 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${(props: GlobalStylesType) => props.theme.body};
     color: ${(props: GlobalStylesType) => props.theme.text};
-    /* transition: all 0.1s; */
   }
   section{
-    min-height: 100vh;
+    /* min-height: 100vh; */
   }
+  
+  
 `;

@@ -22,8 +22,6 @@ type BackgroundProps = {
 };
 export const Background = styled.div<BackgroundProps>`
   position: fixed;
-  /* left: -240px; */
-  /* top: -299px; */
   left: -240px;
   top: -16vw;
   z-index: 1600;

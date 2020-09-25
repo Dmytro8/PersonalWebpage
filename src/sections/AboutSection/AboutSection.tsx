@@ -37,7 +37,7 @@ const AboutSection = () => {
         <AboutSectionMoreText>
           Need more information about my skills? Download the CV.
         </AboutSectionMoreText>
-        <Button text="Download CV">
+        <Button text="Download CV" size="medium">
           <AboutSectionDownload href={CV} download>
             Download CV
           </AboutSectionDownload>
