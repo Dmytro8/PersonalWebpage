@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, Controller } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers";
@@ -16,6 +17,7 @@ type ContactFormProps = {
   theme: "dark" | "light";
 };
 const ContactForm: FC<ContactFormProps> = ({ theme }) => {
+  const { t } = useTranslation();
   const [captcha, setCaptcha] = useState(null);
   const [captchaError, setCaptchaError] = useState(false);
   const { handleSubmit, control, errors } = useForm({
@@ -34,7 +36,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   };
   return (
     <ContactFormBody onSubmit={handleSubmit(onSubmit)}>
-      <ContactTitle>Contact Form</ContactTitle>
+      <ContactTitle>{t("contact.formTitle")}</ContactTitle>
       <ContactField>
         {errors.name ? (
           <>
@@ -42,7 +44,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               error
               as={StyledTextField}
               fullWidth
-              placeholder="*Your name"
+              placeholder={"*" + t("contact.namePlaceholder")}
               type="text"
               name="name"
               title="Enter your name"
@@ -55,7 +57,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           <Controller
             as={StyledTextField}
             fullWidth
-            placeholder="*Your name"
+            placeholder={"*" + t("contact.namePlaceholder")}
             type="text"
             name="name"
             title="Enter your name"
@@ -71,7 +73,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               error
               as={StyledTextField}
               fullWidth
-              placeholder="Your phone number"
+              placeholder={t("contact.phonePlaceholder")}
               type="tel"
               name="phone"
               title="Enter your phone number"
@@ -84,7 +86,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           <Controller
             as={StyledTextField}
             fullWidth
-            placeholder="Your phone number"
+            placeholder={t("contact.phonePlaceholder")}
             type="tel"
             name="phone"
             title="Enter your phone number"
@@ -100,7 +102,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               error
               as={StyledTextField}
               fullWidth
-              placeholder="*Your e-mail"
+              placeholder={"*" + t("contact.emailPlaceholder")}
               type="email"
               name="email"
               title="Enter your email"
@@ -113,7 +115,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           <Controller
             as={StyledTextField}
             fullWidth
-            placeholder="*Your e-mail"
+            placeholder={"*" + t("contact.emailPlaceholder")}
             type="email"
             name="email"
             title="Enter your email"
@@ -129,7 +131,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               error
               as={StyledTextField}
               fullWidth
-              placeholder="*Message"
+              placeholder={"*" + t("contact.messagePlaceholder")}
               type="text"
               multiline
               rowsMax="5"
@@ -144,7 +146,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           <Controller
             as={StyledTextField}
             fullWidth
-            placeholder="*Message"
+            placeholder={"*" + t("contact.messagePlaceholder")}
             type="text"
             multiline
             rowsMax="5"
@@ -157,7 +159,8 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
       </ContactField>
       <ContactField
         style={{
-          width: "fit-content"
+          // width: "fit-content",
+          overflow: "hidden"
         }}
         isError={captchaError}
       >
@@ -167,7 +170,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           onChange={onChange}
         />
       </ContactField>
-      <Button text="Send Message" size="small" />
+      <Button text={t("contact.button")} size="small" />
     </ContactFormBody>
   );
 };

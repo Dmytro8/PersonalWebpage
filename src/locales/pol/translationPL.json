@@ -1,0 +1,68 @@
+{
+  "navigation": {
+    "about": "O mnie",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "greeting": {
+    "hello": "Cześć",
+    "i": "Jestem ",
+    "name": "Dmytro",
+    "profession": "Frontend developer",
+    "message": "Potrafię przełożyć wszystkie Twoje pomysły na rzeczywistość!",
+    "button": "Skontaktuj się"
+  },
+  "about": {
+    "title": "O mnie",
+    "description": "Jestem osobą z pasją do technologii komputerowych i chęcią pracy z ludźmi z całego świata. Jestem programistą frontendowym, który lubi uczyć się nowych rzeczy i wprowadzać to w życie. Moja krótka samoocena - osoba oddana i odpowiedzialna z dużymi celami.",
+    "need": "Potrzebujesz więcej informacji o moich umiejętnościach? Pobierz CV.",
+    "button": "Pobierz CV"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "project": [
+      {
+        "name": "Barbershop",
+        "description": "Jednostronicowa aplikacja stworzona z myślą o udanym biznesie fryzjerskim",
+        "github": "https://github.com/Dmytro8/BarberShop"
+      },
+      {
+        "name": "Music platform",
+        "description": "Platforma muzyczna, stworzona dla jednej osoby lub zespołu do hostowania muzyki i bycia online w każdej chwili",
+        "github": "https://github.com/Dmytro8/beat-client"
+      },
+      {
+        "name": "Beerguru",
+        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/beerguru"
+      },
+      {
+        "name": "Personal webpage",
+        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/PersonalWebpage"
+      },
+      {
+        "name": "Chat app",
+        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/Chatty"
+      }
+    ],
+    "button": "Zobacz"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Pracujesz nad czymś wspaniałym? Bardzo chciałbym pomóc w tym! Napisz do mnie i rozpocznij swój projekt już teraz! Po prostu zrób to.",
+    "addressTitle": "Adres",
+    "address": "Kraków, Poland",
+    "phoneTitle": "Telefon",
+    "phone": "+48 511 711 068",
+    "emailTitle": "E-mail",
+    "email": "dm.patalakha@gmail.com",
+    "formTitle": "Forma",
+    "namePlaceholder": "Twoje imię",
+    "phonePlaceholder": "Twój numer telefonu",
+    "emailPlaceholder": "Twój adres mailowy",
+    "messagePlaceholder": "Powiadomienie",
+    "button": "Wyślij"
+  }
+}

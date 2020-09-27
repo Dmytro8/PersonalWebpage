@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useTranslation } from "react-i18next";
 import {
   DrawerBody,
   DrawerNavbar,
@@ -17,6 +18,7 @@ type DrawerProps = {
 };
 
 const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
+  const { t } = useTranslation();
   return (
     <DrawerBody>
       <DrawerBar>
@@ -31,7 +33,7 @@ const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
                 smooth={true}
                 duration={500}
               >
-                About
+                {t("navigation.about")}
               </Link>
             </DrawerNavItem>
             <DrawerNavItem>
@@ -42,7 +44,7 @@ const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
                 smooth={true}
                 duration={500}
               >
-                Portfolio
+                {t("navigation.portfolio")}
               </Link>
             </DrawerNavItem>
             <DrawerNavItem>
@@ -53,7 +55,7 @@ const Drawer: FC<DrawerProps> = ({ setOpen, open }) => {
                 smooth={true}
                 duration={500}
               >
-                Contact
+                {t("navigation.contact")}
               </Link>
             </DrawerNavItem>
           </DrawerNavList>

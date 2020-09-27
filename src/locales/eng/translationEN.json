@@ -1,0 +1,68 @@
+{
+  "navigation": {
+    "about": "About",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "greeting": {
+    "hello": "Hello",
+    "i": "I'm ",
+    "name": "Dmytro",
+    "profession": "Frontend developer",
+    "message": "I can translate all your ideas into reality!",
+    "button": "Contact me"
+  },
+  "about": {
+    "title": "About",
+    "description": "I am a person with a passion for computer technologies and a desire to work with people from all over the world. I am a Frontend Developer, who likes to study new things and put this into practice. My brief self-description - a dedicated and responsible person with big goals.",
+    "need": "Need more information about my skills? Download the CV.",
+    "button": "Download CV"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "project": [
+      {
+        "name": "Barbershop",
+        "description": "Single page application, created for successful barbershop business",
+        "github": "https://github.com/Dmytro8/BarberShop"
+      },
+      {
+        "name": "Music platform",
+        "description": "Muzic platform, created for one person or band to host music and be online every moment",
+        "github": "https://github.com/Dmytro8/beat-client"
+      },
+      {
+        "name": "Beerguru",
+        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/beerguru"
+      },
+      {
+        "name": "Personal webpage",
+        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/PersonalWebpage"
+      },
+      {
+        "name": "Chat app",
+        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/Chatty"
+      }
+    ],
+    "button": "View"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Are you working on something great? I would love to help make it happen! Drop me a letter and start your project right now! Just do it.",
+    "addressTitle": "Address",
+    "address": "Cracow, Poland",
+    "phoneTitle": "Phone",
+    "phone": "+48 511 711 068",
+    "emailTitle": "E-mail",
+    "email": "dm.patalakha@gmail.com",
+    "formTitle": "Form",
+    "namePlaceholder": "Your name",
+    "phonePlaceholder": "Your phone number",
+    "emailPlaceholder": "Your e-mail",
+    "messagePlaceholder": "Message",
+    "button": "Send"
+  }
+}

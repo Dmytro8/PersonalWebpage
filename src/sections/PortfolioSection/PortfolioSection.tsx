@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -21,10 +22,11 @@ import personalImg from "../../static/portfolio/project3.png";
 import beerImg from "../../static/portfolio/project4.png";
 import chattyImg from "../../static/portfolio/project5.png";
 
-import { projects } from "./projects.data";
+// import { projects } from "./projects.data";
 import { Button } from "../../components/Button";
 
 const PortfolioSection = () => {
+  const { t } = useTranslation();
   const [projectIndex, setProjectIndex] = useState(0);
   const settings = {
     className: "center",
@@ -52,7 +54,7 @@ const PortfolioSection = () => {
   return (
     <PortfolioSectionBody id="portfolio">
       <PorfolioSectionContainer>
-        <Title title="Portfolio" size="big" />
+        <Title title={t("portfolio.title")} size="big" />
         <PortfolioWrapper>
           <Slider {...settings}>
             <PortfolioImageWrapper>
@@ -73,11 +75,18 @@ const PortfolioSection = () => {
           </Slider>
         </PortfolioWrapper>
         <ProjectDescription>
-          <ProjectName>{projects[projectIndex].name}</ProjectName>
-          <ProjectAbout>{projects[projectIndex].description}</ProjectAbout>
+          <ProjectName>
+            {t(`portfolio.project.${projectIndex}.name`)}
+          </ProjectName>
+          <ProjectAbout>
+            {t(`portfolio.project.${projectIndex}.description`)}
+          </ProjectAbout>
           <Button text="View Project" size="medium">
-            <ProjectView href={projects[projectIndex].github} target="_blank">
-              View Project
+            <ProjectView
+              href={t(`portfolio.project.${projectIndex}.github`)}
+              target="_blank"
+            >
+              {t(`portfolio.button`)}
             </ProjectView>
           </Button>
         </ProjectDescription>

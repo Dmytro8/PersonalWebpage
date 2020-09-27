@@ -10,26 +10,27 @@ import {
 } from "./Greeting.styled.";
 import { Title } from "../Title";
 import { Button } from "../Button";
+import { useTranslation } from "react-i18next";
 
 const Greeting = () => {
+  const { t } = useTranslation();
   return (
     <GreetingBody>
       <GreetingContainer>
-        <Title title="Hello" size="small" />
+        <Title title={t("greeting.hello")} size="small" />
         <GreetingName>
-          I'm <GreetingNameAccent>Dmytro</GreetingNameAccent>
+          {t("greeting.i")}{" "}
+          <GreetingNameAccent>{t("greeting.name")}</GreetingNameAccent>
         </GreetingName>
         <GreetingDeveloper>
           <GreetingDeveloperUnderline>
-            Frontend Developer
+            {t("greeting.profession")}
           </GreetingDeveloperUnderline>
         </GreetingDeveloper>
-        <GreetingDeveloper>
-          I can translate all your ideas into reality!
-        </GreetingDeveloper>
+        <GreetingDeveloper>{t("greeting.message")}</GreetingDeveloper>
         <Button text="Contact me" size="big">
           <Link to="contact" spy={true} smooth={true} duration={500}>
-            Contact me
+            {t("greeting.button")}
           </Link>
         </Button>
       </GreetingContainer>

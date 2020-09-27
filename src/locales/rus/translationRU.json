@@ -1,0 +1,68 @@
+{
+  "navigation": {
+    "about": "Обо мне",
+    "portfolio": "Портфолио",
+    "contact": "Контакт"
+  },
+  "greeting": {
+    "hello": "Привет",
+    "i": "Я - ",
+    "name": "Дмитрий",
+    "profession": "Фронтенд разработчик",
+    "message": "Я могу воплотить все твои идеи в реальность!",
+    "button": "Связаться"
+  },
+  "about": {
+    "title": "Обо мне",
+    "description": "Я человек со страстью к компьютерным технологиям и желанием работать с людьми со всего мира. Я фронтенд-разработчик, которому нравится изучать новые вещи и применять их на практике. Мое краткое самоописание - целеустремленный и ответственный человек с большими целями.",
+    "need": "Нужна дополнительная информация о моих навыках? Скачай резюме.",
+    "button": "Резюме"
+  },
+  "portfolio": {
+    "title": "Портфолио",
+    "project": [
+      {
+        "name": "Barbershop",
+        "description": "Одностраничное приложение, созданное для успешного парикмахерского бизнеса",
+        "github": "https://github.com/Dmytro8/BarberShop"
+      },
+      {
+        "name": "Музыкальная платформа",
+        "description": "Созданная для одного человека или группы, чтобы размещать музыку и быть онлайн в любой момент",
+        "github": "https://github.com/Dmytro8/beat-client"
+      },
+      {
+        "name": "Beerguru",
+        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/beerguru"
+      },
+      {
+        "name": "Personal webpage",
+        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/PersonalWebpage"
+      },
+      {
+        "name": "Chat app",
+        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "github": "https://github.com/Dmytro8/Chatty"
+      }
+    ],
+    "button": "Посмотреть"
+  },
+  "contact": {
+    "title": "Контакт",
+    "description": "Вы работаете над чем-то большим? Я хотел бы помочь в этом! Напишите мне письмо и начните свой проект прямо сейчас! Просто сделайте это.",
+    "addressTitle": "Адрес",
+    "address": "Краков, Польша",
+    "phoneTitle": "Телефон",
+    "phone": "+48 511 711 068",
+    "emailTitle": "E-mail",
+    "email": "dm.patalakha@gmail.com",
+    "formTitle": "Форма",
+    "namePlaceholder": "Ваше имя",
+    "phonePlaceholder": "Ваш номер телефона",
+    "emailPlaceholder": "Ваш e-mail",
+    "messagePlaceholder": "Сообщение",
+    "button": "Отправить"
+  }
+}

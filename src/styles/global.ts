@@ -34,7 +34,6 @@ export const GlobalStyles = createGlobalStyle`
       border: 4px solid ${(props: GlobalStylesType) => props.theme.accent};
     }
   }
-    /* font-family: 'Jost', sans-serif;  } */
   html{
     scroll-behavior: smooth;
   }
@@ -42,10 +41,6 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background: ${(props: GlobalStylesType) => props.theme.body};
     color: ${(props: GlobalStylesType) => props.theme.text};
+    transition: all 0.3s ease;
   }
-  section{
-    /* min-height: 100vh; */
-  }
-  
-  
 `;
