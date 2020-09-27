@@ -5,7 +5,7 @@ export const ContactBody = styled.section`
   display: grid;
   justify-content: center;
   align-content: start;
-  padding-top: 100px;
+  padding-top: 50px;
 `;
 
 export const ContactContainer = styled(InnerContainer)``;

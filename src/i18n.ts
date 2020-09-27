@@ -5,6 +5,7 @@ import { initReactI18next } from "react-i18next";
 
 import translationEN from "./locales/eng/translationEN.json";
 import translationPL from "./locales/pol/translationPL.json";
+import translationUA from "./locales/ukr/translationUA.json";
 import translationRU from "./locales/rus/translationRU.json";
 
 // the translation
@@ -14,6 +15,9 @@ const resources = {
   },
   pol: {
     translation: translationPL
+  },
+  ukr: {
+    translation: translationUA
   },
   rus: {
     translation: translationRU
@@ -36,7 +40,7 @@ i18n
     },
     (err, t) => {
       if (err) return console.log("something went wrong loading", err);
-      t("key"); // -> same as i18next.t
+      t("key");
     }
   );
 

@@ -5,6 +5,7 @@ export const PortfolioSectionBody = styled.section`
   display: grid;
   justify-content: center;
   align-items: start;
+  padding-bottom: 50px;
 `;
 
 export const PorfolioSectionContainer = styled(InnerContainer)`

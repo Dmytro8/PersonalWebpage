@@ -37,10 +37,14 @@ export const GlobalStyles = createGlobalStyle`
   html{
     scroll-behavior: smooth;
   }
+  html, body {
+    overflow-x: hidden !important;
+    padding: 0 !important;
+  }
 
   body {
-    background: ${(props: GlobalStylesType) => props.theme.body};
+    background-color: ${(props: GlobalStylesType) => props.theme.body};
     color: ${(props: GlobalStylesType) => props.theme.text};
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 `;
