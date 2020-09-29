@@ -7,7 +7,6 @@ import "./i18n";
 import { lightTheme, darkTheme } from "./styles/theme";
 
 ReactDOM.render(
-  // <React.StrictMode>
   <Suspense
     fallback={
       <Progress
@@ -21,6 +20,5 @@ ReactDOM.render(
   >
     <App />
   </Suspense>,
-  // </React.StrictMode>,
   document.getElementById("root")
 );

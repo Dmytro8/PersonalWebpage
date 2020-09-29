@@ -27,7 +27,7 @@
         "github": "https://github.com/Dmytro8/BarberShop"
       },
       {
-        "name": "Музыкальная платформа",
+        "name": "Beat",
         "description": "Созданная для одного человека или группы, чтобы размещать музыку и быть онлайн в любой момент",
         "github": "https://github.com/Dmytro8/beat-client"
       },
@@ -60,9 +60,13 @@
     "email": "dm.patalakha@gmail.com",
     "formTitle": "Форма",
     "namePlaceholder": "Ваше имя",
+    "nameInputTitle": "Введите ваше имя",
     "phonePlaceholder": "Ваш номер телефона",
+    "phoneInputTitle": "Введите ваш номер телефона",
     "emailPlaceholder": "Ваш e-mail",
+    "emailInputTitle": "Введите вашу електронную почту",
     "messagePlaceholder": "Сообщение",
+    "messageInputTitle": "Введите ваше сообщение",
     "button": "Отправить"
   }
 }

@@ -1,4 +1,6 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm, Controller } from "react-hook-form";
@@ -12,12 +14,15 @@ import {
 import { ContactTitle } from "../../../sections/ContactSection/ContactSection.styled";
 import { Button } from "../../Button";
 import { ContactSchema } from "../FormValidation";
+import { opacityVariants } from "../../../styles/animation";
 
 type ContactFormProps = {
   theme: "dark" | "light";
 };
 const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   const { t } = useTranslation();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
   const [captcha, setCaptcha] = useState(null);
   const [captchaError, setCaptchaError] = useState(false);
   const { handleSubmit, control, errors } = useForm({
@@ -34,8 +39,19 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
     setCaptchaError(false);
     setCaptcha(value);
   };
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
-    <ContactFormBody onSubmit={handleSubmit(onSubmit)}>
+    <ContactFormBody
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={opacityVariants}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <ContactTitle>{t("contact.formTitle")}</ContactTitle>
       <ContactField>
         {errors.name ? (
@@ -47,7 +63,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               placeholder={"*" + t("contact.namePlaceholder")}
               type="text"
               name="name"
-              title="Enter your name"
+              title={t("contact.nameInputTitle")}
               control={control}
               defaultValue=""
               helperText={errors.name ? errors.name.message : ""}
@@ -60,7 +76,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
             placeholder={"*" + t("contact.namePlaceholder")}
             type="text"
             name="name"
-            title="Enter your name"
+            title={t("contact.nameInputTitle")}
             control={control}
             defaultValue=""
           />
@@ -76,7 +92,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               placeholder={t("contact.phonePlaceholder")}
               type="tel"
               name="phone"
-              title="Enter your phone number"
+              title={t("contact.phoneInputTitle")}
               control={control}
               defaultValue=""
               helperText={errors.phone ? errors.phone.message : ""}
@@ -89,7 +105,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
             placeholder={t("contact.phonePlaceholder")}
             type="tel"
             name="phone"
-            title="Enter your phone number"
+            title={t("contact.phoneInputTitle")}
             control={control}
             defaultValue=""
           />
@@ -105,7 +121,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               placeholder={"*" + t("contact.emailPlaceholder")}
               type="email"
               name="email"
-              title="Enter your email"
+              title={t("contact.emailInputTitle")}
               control={control}
               defaultValue=""
               helperText={errors.email ? errors.email.message : ""}
@@ -118,7 +134,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
             placeholder={"*" + t("contact.emailPlaceholder")}
             type="email"
             name="email"
-            title="Enter your email"
+            title={t("contact.emailInputTitle")}
             control={control}
             defaultValue=""
           />
@@ -136,7 +152,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
               multiline
               rowsMax="5"
               name="message"
-              title="Enter your message"
+              title={t("contact.messageInputTitle")}
               control={control}
               defaultValue=""
               helperText={errors.message ? errors.message.message : ""}
@@ -151,7 +167,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
             multiline
             rowsMax="5"
             name="message"
-            title="Enter your message"
+            title={t("contact.messageInputTitle")}
             control={control}
             defaultValue=""
           />
@@ -159,7 +175,6 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
       </ContactField>
       <ContactField
         style={{
-          // width: "fit-content",
           overflow: "hidden"
         }}
         isError={captchaError}
@@ -170,7 +185,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           onChange={onChange}
         />
       </ContactField>
-      <Button text={t("contact.button")} size="small" />
+      <Button text={t("contact.button")} size="medium" />
     </ContactFormBody>
   );
 };

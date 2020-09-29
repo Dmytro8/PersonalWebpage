@@ -8,7 +8,7 @@ export function useScroll() {
 
   const listener = (e: any) => {
     setBodyOffset(document.body.getBoundingClientRect());
-    setScrollY(-bodyOffset.top);
+    setScrollY(-bodyOffset.top - 100);
   };
 
   useEffect(() => {

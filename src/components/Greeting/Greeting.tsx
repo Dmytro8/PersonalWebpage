@@ -11,11 +11,12 @@ import {
 import { Title } from "../Title";
 import { Button } from "../Button";
 import { useTranslation } from "react-i18next";
+import { opacityVariants } from "../../styles/animation";
 
 const Greeting = () => {
   const { t } = useTranslation();
   return (
-    <GreetingBody>
+    <GreetingBody animate="visible" initial="hidden" variants={opacityVariants}>
       <GreetingContainer>
         <Title title={t("greeting.hello")} size="small" />
         <GreetingName>

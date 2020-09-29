@@ -14,7 +14,6 @@ export const LogoUpper = styled.span`
   border-top: 1px solid
     ${({ theme }: GlobalStylesType & LogoProps) => theme.accent};
   color: ${({ theme }: GlobalStylesType & LogoProps) => theme.text};
-  padding-top: 5px;
   width: fit-content;
   transition: font-size 0.3s;
   font-size: ${({ size }) => (size === "big" ? "17px" : "14px")};

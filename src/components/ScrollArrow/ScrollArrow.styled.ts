@@ -22,12 +22,11 @@ type ScrollArrowTextProps = {
 export const ScrollArrowText = styled.p<ScrollArrowTextProps>`
   position: absolute;
   text-transform: uppercase;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
   transform: ${({ scrollProgress }) =>
     "rotate(90deg) translateX(" + scrollProgress + "px)"};
   background: ${({ theme }) => theme.body};
   width: fit-content;
-  height: 14px;
   letter-spacing: 0.05em;
   font-size: 16px;
   color: ${({ theme }) => theme.textOpacity};

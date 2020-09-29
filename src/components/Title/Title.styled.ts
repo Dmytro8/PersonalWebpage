@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 type TitleTextProps = {
   size: "small" | "big";
 };
-export const TitleText = styled.p<TitleTextProps>`
+export const TitleText = styled(motion.p)<TitleTextProps>`
   font-size: ${({ size }) => (size === "small" ? "32px" : "48px")};
   color: ${({ theme }) => theme.text};
   display: grid;

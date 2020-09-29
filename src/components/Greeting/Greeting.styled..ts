@@ -1,9 +1,10 @@
 import { InnerContainer } from "./../../styles/common";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 export const GreetingContainer = styled(InnerContainer)``;
 
-export const GreetingBody = styled.div`
+export const GreetingBody = styled(motion.div)`
   display: grid;
   align-content: start;
   margin-top: 18vh;

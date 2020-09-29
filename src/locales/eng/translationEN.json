@@ -13,8 +13,8 @@
     "button": "Contact me"
   },
   "about": {
-    "title": "About",
-    "description": "I am a person with a passion for computer technologies and a desire to work with people from all over the world. I am a Frontend Developer, who likes to study new things and put this into practice. My brief self-description - a dedicated and responsible person with big goals.",
+    "title": "About Me",
+    "description": "I am organized and communicative person with a desire to work with people from all over the world. I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best. ",
     "need": "Need more information about my skills? Download the CV.",
     "button": "Download CV"
   },
@@ -27,8 +27,8 @@
         "github": "https://github.com/Dmytro8/BarberShop"
       },
       {
-        "name": "Music platform",
-        "description": "Muzic platform, created for one person or band to host music and be online every moment",
+        "name": "Beat",
+        "description": "Music platform, created for one person or music band to host music and be online everyday",
         "github": "https://github.com/Dmytro8/beat-client"
       },
       {
@@ -60,9 +60,13 @@
     "email": "dm.patalakha@gmail.com",
     "formTitle": "Form",
     "namePlaceholder": "Your name",
+    "nameInputTitle": "Enter your name",
     "phonePlaceholder": "Your phone number",
+    "phoneInputTitle": "Enter your phone number",
     "emailPlaceholder": "Your e-mail",
+    "emailInputTitle": "Enter your e-mail",
     "messagePlaceholder": "Message",
+    "messageInputTitle": "Enter your message",
     "button": "Send"
   }
 }

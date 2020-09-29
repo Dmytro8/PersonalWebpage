@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { InnerContainer } from "./../../styles/common";
 import styled from "styled-components";
 
@@ -22,7 +23,7 @@ export const ContactContent = styled.div`
   }
 `;
 
-export const ContactAddress = styled.div`
+export const ContactAddress = styled(motion.div)`
   padding: 30px;
 `;
 

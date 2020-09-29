@@ -32,7 +32,7 @@ i18n
     {
       resources,
       fallbackLng: window.localStorage.getItem("i18nextLng") ?? "eng",
-      debug: true,
+      debug: false,
       detection: { order: ["queryString", "cookie"] },
       interpolation: {
         escapeValue: false

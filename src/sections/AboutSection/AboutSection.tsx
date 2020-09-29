@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { opacityVariants } from "../../styles/animation";
 import {
   AboutSectionContainer,
   AboutSectionDescription,
@@ -17,17 +20,49 @@ import CV from "../../static/CV_Patalakha_Dmytro.pdf";
 
 const AboutSection = () => {
   const { t } = useTranslation();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <AboutSectionContainer id="about">
       <AboutSectionDescription>
-        <AboutSectionMe></AboutSectionMe>
+        <AboutSectionMe
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={opacityVariants}
+        ></AboutSectionMe>
         <AboutSectionContent>
           <Title title={t("about.title")} size="big" />
-          <AboutSectionText>{t("about.description")}</AboutSectionText>
-          <AboutSectionSignature>Dmytro</AboutSectionSignature>
+          <AboutSectionText
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={opacityVariants}
+          >
+            {t("about.description")}
+          </AboutSectionText>
+          <AboutSectionSignature
+            ref={ref}
+            animate={controls}
+            initial="hidden"
+            variants={opacityVariants}
+          >
+            Dmytro
+          </AboutSectionSignature>
         </AboutSectionContent>
       </AboutSectionDescription>
-      <AboutSectionMore>
+      <AboutSectionMore
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={opacityVariants}
+      >
         <AboutSectionMoreText>{t("about.need")}</AboutSectionMoreText>
         <Button text="Download CV" size="medium">
           <AboutSectionDownload href={CV} download>

@@ -27,7 +27,7 @@
         "github": "https://github.com/Dmytro8/BarberShop"
       },
       {
-        "name": "Music platform",
+        "name": "Beat",
         "description": "Platforma muzyczna, stworzona dla jednej osoby lub zespołu do hostowania muzyki i bycia online w każdej chwili",
         "github": "https://github.com/Dmytro8/beat-client"
       },
@@ -51,7 +51,7 @@
   },
   "contact": {
     "title": "Kontakt",
-    "description": "Pracujesz nad czymś wspaniałym? Bardzo chciałbym pomóc w tym! Napisz do mnie i rozpocznij swój projekt już teraz! Po prostu zrób to.",
+    "description": "Pracujesz nad czymś wspaniałym? Bardzo chciałbym pomóc w tym! Napisz do mnie i rozpocznij swój projekt już teraz!",
     "addressTitle": "Adres",
     "address": "Kraków, Poland",
     "phoneTitle": "Telefon",
@@ -60,9 +60,13 @@
     "email": "dm.patalakha@gmail.com",
     "formTitle": "Forma",
     "namePlaceholder": "Twoje imię",
+    "nameInputTitle": "Podaj swoje imię",
     "phonePlaceholder": "Twój numer telefonu",
-    "emailPlaceholder": "Twój adres mailowy",
+    "phoneInputTitle": "Podaj swój numer telefonu",
+    "emailPlaceholder": "Twój adres poczty elektronicznej",
+    "emailInputTitle": "Podaj swój adres poczty elektronicznej",
     "messagePlaceholder": "Powiadomienie",
+    "messageInputTitle": "Wpisz swoje powiadomienie",
     "button": "Wyślij"
   }
 }

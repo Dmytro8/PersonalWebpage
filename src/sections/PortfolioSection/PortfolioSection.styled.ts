@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { InnerContainer } from "./../../styles/common";
 import styled from "styled-components";
 
@@ -11,17 +12,15 @@ export const PortfolioSectionBody = styled.section`
 export const PorfolioSectionContainer = styled(InnerContainer)`
   p:first-child {
     justify-self: end;
-    margin-top: 70px;
   }
   button {
     padding: 1.4rem 0;
   }
 `;
 
-export const PortfolioWrapper = styled.div`
+export const PortfolioWrapper = styled(motion.div)`
   width: inherit;
   margin-top: 80px;
-  /* z-index: 1650; */
   .slick-slide,
   .slick-active,
   .slick-list {
@@ -61,7 +60,7 @@ export const PortfolioImageWrapper = styled.div`
   }
 `;
 
-export const ProjectDescription = styled.div`
+export const ProjectDescription = styled(motion.div)`
   display: grid;
   justify-items: center;
   margin-top: 50px;

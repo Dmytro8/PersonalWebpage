@@ -27,6 +27,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-hook-form": "^6.8.4",
     "react-i18next": "^11.7.3",
+    "react-intersection-observer": "^8.28.6",
     "react-scripts": "3.4.3",
     "react-scroll": "^1.8.1",
     "react-slick": "^0.27.11",

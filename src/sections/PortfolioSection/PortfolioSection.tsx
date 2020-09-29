@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { useAnimation } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,9 +26,12 @@ import chattyImg from "../../static/portfolio/project5.png";
 
 // import { projects } from "./projects.data";
 import { Button } from "../../components/Button";
+import { opacityVariants } from "../../styles/animation";
 
 const PortfolioSection = () => {
   const { t } = useTranslation();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
   const [projectIndex, setProjectIndex] = useState(0);
   const settings = {
     className: "center",
@@ -51,11 +56,21 @@ const PortfolioSection = () => {
       }
     ]
   };
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   return (
     <PortfolioSectionBody id="portfolio">
       <PorfolioSectionContainer>
         <Title title={t("portfolio.title")} size="big" />
-        <PortfolioWrapper>
+        <PortfolioWrapper
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={opacityVariants}
+        >
           <Slider {...settings}>
             <PortfolioImageWrapper>
               <img src={barberShopImg} alt="barbershop" />
@@ -74,7 +89,12 @@ const PortfolioSection = () => {
             </PortfolioImageWrapper>
           </Slider>
         </PortfolioWrapper>
-        <ProjectDescription>
+        <ProjectDescription
+          ref={ref}
+          animate={controls}
+          initial="hidden"
+          variants={opacityVariants}
+        >
           <ProjectName>
             {t(`portfolio.project.${projectIndex}.name`)}
           </ProjectName>

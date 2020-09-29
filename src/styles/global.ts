@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   *{
     padding: 0;
     margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     scrollbar-width: thin;
     scrollbar-color: ${(props: GlobalStylesType) =>
       `${props.theme.accent} ${props.theme.body}`};
@@ -46,5 +46,8 @@ export const GlobalStyles = createGlobalStyle`
     background-color: ${(props: GlobalStylesType) => props.theme.body};
     color: ${(props: GlobalStylesType) => props.theme.text};
     transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  section{
+    padding: 70px 0 30px 0;
   }
 `;

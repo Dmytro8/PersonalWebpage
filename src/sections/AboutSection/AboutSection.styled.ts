@@ -1,12 +1,13 @@
 import { InnerContainer } from "./../../styles/common";
 import styled from "styled-components";
-
+import { motion } from "framer-motion";
 export const AboutSectionContainer = styled.section`
   display: grid;
   justify-content: center;
   align-items: start;
   grid-template-rows: 3fr 1fr;
   gap: 100px;
+
   @media screen and (max-width: 800px) {
     gap: 100px;
   }
@@ -18,7 +19,6 @@ export const AboutSectionContainer = styled.section`
 export const AboutSectionDescription = styled(InnerContainer)`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding-top: 70px;
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -28,13 +28,12 @@ export const AboutSectionDescription = styled(InnerContainer)`
 export const AboutSectionMore = styled(InnerContainer)`
   display: grid;
   gap: 20px;
-  /* padding: 50px 0 100px 0; */
   @media screen and (max-width: 800px) {
     gap: 10px;
   }
 `;
 
-export const AboutSectionMe = styled.div``;
+export const AboutSectionMe = styled(motion.div)``;
 
 export const AboutSectionContent = styled.div`
   display: grid;
@@ -44,14 +43,14 @@ export const AboutSectionContent = styled.div`
   }
 `;
 
-export const AboutSectionText = styled.p`
+export const AboutSectionText = styled(motion.p)`
   text-align: justify;
   font-size: calc(14px + 0.5vw);
   line-height: 28px;
   font-weight: 300;
 `;
 
-export const AboutSectionSignature = styled.p`
+export const AboutSectionSignature = styled(motion.p)`
   font-family: "Dancing Script", cursive;
   font-size: 48px;
   line-height: 58px;

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 type ButtonBodyProps = {
   size: "small" | "medium" | "big";
 };
-export const ButtonBody = styled.button<ButtonBodyProps>`
+export const ButtonBody = styled(motion.button)<ButtonBodyProps>`
   background: ${({ theme }) => theme.accent};
   color: ${({ theme }) => theme.body};
   padding: ${({ size }) => {
@@ -23,4 +24,10 @@ export const ButtonBody = styled.button<ButtonBodyProps>`
   cursor: pointer;
   filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.25));
   font-weight: 700;
+  border: 1px solid ${({ theme }) => theme.accent};
+  &:focus {
+    outline: none;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
 `;
