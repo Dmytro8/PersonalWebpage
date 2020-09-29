@@ -19,6 +19,12 @@ import { opacityVariants } from "../../../styles/animation";
 type ContactFormProps = {
   theme: "dark" | "light";
 };
+
+function encode(data: any) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   const { t } = useTranslation();
   const controls = useAnimation();
@@ -28,9 +34,16 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   const { handleSubmit, control, errors } = useForm({
     resolver: yupResolver(ContactSchema)
   });
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: any, e: any) => {
+    e.preventDefault();
     if (captcha) {
-      alert(data);
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...data })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
     } else {
       setCaptchaError(true);
     }
@@ -51,7 +64,12 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
       initial="hidden"
       variants={opacityVariants}
       onSubmit={handleSubmit(onSubmit)}
+      name="contact"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
     >
+      <input type="hidden" name="form-name" value="contact" />
       <ContactTitle>{t("contact.formTitle")}</ContactTitle>
       <ContactField>
         {errors.name ? (
@@ -175,6 +193,8 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
       </ContactField>
       <ContactField
         style={{
+          width: "fit-content",
+          height: "fit-content",
           overflow: "hidden"
         }}
         isError={captchaError}

@@ -10,11 +10,11 @@ const Button: FC<ButtonProps> = ({ text, children, size }) => {
   return (
     <>
       {children ? (
-        <ButtonBody whileTap={{ scale: 0.9 }} size={size}>
+        <ButtonBody type="submit" whileTap={{ scale: 0.9 }} size={size}>
           {children}
         </ButtonBody>
       ) : (
-        <ButtonBody whileTap={{ scale: 0.9 }} size={size}>
+        <ButtonBody type="submit" whileTap={{ scale: 0.9 }} size={size}>
           {text}
         </ButtonBody>
       )}

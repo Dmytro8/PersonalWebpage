@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import { TextField } from "@material-ui/core";
 
+// type ContactFormBodyProps = {
+//   netlify: any;
+// };
+
 export const ContactFormBody = styled(motion.form)`
   box-shadow: -5px 5px 20px 10px rgba(0, 0, 0, 0.25);
   padding: 30px;
