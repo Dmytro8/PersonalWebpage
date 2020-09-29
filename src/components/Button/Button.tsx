@@ -5,16 +5,27 @@ type ButtonProps = {
   text: string;
   size: "small" | "medium" | "big";
   children?: React.ReactNode;
+  [props: string]: any;
 };
-const Button: FC<ButtonProps> = ({ text, children, size }) => {
+const Button: FC<ButtonProps> = ({ text, children, size, ...props }) => {
   return (
     <>
       {children ? (
-        <ButtonBody type="submit" whileTap={{ scale: 0.9 }} size={size}>
+        <ButtonBody
+          type="submit"
+          whileTap={{ scale: 0.9 }}
+          size={size}
+          {...props}
+        >
           {children}
         </ButtonBody>
       ) : (
-        <ButtonBody type="submit" whileTap={{ scale: 0.9 }} size={size}>
+        <ButtonBody
+          type="submit"
+          whileTap={{ scale: 0.9 }}
+          size={size}
+          {...props}
+        >
           {text}
         </ButtonBody>
       )}

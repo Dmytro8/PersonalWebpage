@@ -15,6 +15,7 @@ import { ContactTitle } from "../../../sections/ContactSection/ContactSection.st
 import { Button } from "../../Button";
 import { ContactSchema } from "../FormValidation";
 import { opacityVariants } from "../../../styles/animation";
+import { DialogOnSend } from "../../DialogOnSend";
 
 type ContactFormProps = {
   theme: "dark" | "light";
@@ -30,8 +31,10 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
   const [captcha, setCaptcha] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [isFormSuccess, setIsFormSuccess] = useState(false);
   const [captchaError, setCaptchaError] = useState(false);
-  const { handleSubmit, control, errors } = useForm({
+  const { handleSubmit, control, errors, reset } = useForm({
     resolver: yupResolver(ContactSchema)
   });
   const onSubmit = (data: any, e: any) => {
@@ -42,8 +45,15 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "contact", ...data })
       })
-        .then(() => alert("Success!"))
-        .catch(error => alert(error));
+        .then(() => {
+          setIsFormSuccess(true);
+          handleClickOpen();
+          reset();
+        })
+        .catch(error => {
+          setIsFormSuccess(false);
+          handleClickOpen();
+        });
     } else {
       setCaptchaError(true);
     }
@@ -51,6 +61,12 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
   const onChange = (value: any) => {
     setCaptchaError(false);
     setCaptcha(value);
+  };
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
   };
   useEffect(() => {
     if (inView) {
@@ -205,7 +221,19 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
           onChange={onChange}
         />
       </ContactField>
-      <Button text={t("contact.button")} size="medium" />
+      <Button
+        text={t("contact.button")}
+        size="medium"
+        // onClick={() => {
+        //   setIsFormSuccess(true);
+        //   handleClickOpen();
+        // }}
+      />
+      <DialogOnSend
+        isFormSuccess={isFormSuccess}
+        open={open}
+        handleClose={handleClose}
+      />
     </ContactFormBody>
   );
 };
