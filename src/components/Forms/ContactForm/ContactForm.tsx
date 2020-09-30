@@ -9,7 +9,8 @@ import { yupResolver } from "@hookform/resolvers";
 import {
   ContactFormBody,
   ContactField,
-  StyledTextField
+  StyledTextField,
+  ReCAPTCHAError
 } from "./ContactForm.styled";
 import { ContactTitle } from "../../../sections/ContactSection/ContactSection.styled";
 import { Button } from "../../Button";
@@ -48,7 +49,7 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
         .then(() => {
           setIsFormSuccess(true);
           handleClickOpen();
-          reset();
+          reset({ name: "", phone: "", email: "", message: "" });
         })
         .catch(error => {
           setIsFormSuccess(false);
@@ -209,26 +210,19 @@ const ContactForm: FC<ContactFormProps> = ({ theme }) => {
       </ContactField>
       <ContactField
         style={{
-          width: "fit-content",
-          height: "fit-content",
           overflow: "hidden"
         }}
-        isError={captchaError}
       >
         <ReCAPTCHA
           theme={theme}
           sitekey="6Le0XNAZAAAAAP_1lLqdGAMTtsGnbCktNFdYRs4W"
           onChange={onChange}
         />
+        <ReCAPTCHAError isError={captchaError}>
+          Please check the box above to proceed
+        </ReCAPTCHAError>
       </ContactField>
-      <Button
-        text={t("contact.button")}
-        size="medium"
-        // onClick={() => {
-        //   setIsFormSuccess(true);
-        //   handleClickOpen();
-        // }}
-      />
+      <Button text={t("contact.button")} size="medium" />
       <DialogOnSend
         isFormSuccess={isFormSuccess}
         open={open}
