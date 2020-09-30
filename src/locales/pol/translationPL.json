@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "O mnie",
-    "description": "Jestem osobą z pasją do technologii komputerowych i chęcią pracy z ludźmi z całego świata. Jestem programistą frontendowym, który lubi uczyć się nowych rzeczy i wprowadzać to w życie. Moja krótka samoocena - osoba oddana i odpowiedzialna z dużymi celami.",
+    "description": "Jestem osobą zorganizowaną i komunikatywną, która chce pracować z ludźmi z całego świata. Cenię uczciwość i odpowiedzialność i tego oczekuję od innych. Nie ma dla mnie rzeczy niemożliwych, niektóre po prostu wymagają więcej czasu i wysiłku. Projektowanie stron internetowych to moja pasja. To moje nieskończone źródło motywacji i mam nadzieję, że pomoże mi osiągnąć wszystkie wyżyny.",
     "need": "Potrzebujesz więcej informacji o moich umiejętnościach? Pobierz CV.",
     "button": "Pobierz CV"
   },
@@ -28,22 +28,22 @@
       },
       {
         "name": "Beat",
-        "description": "Platforma muzyczna, stworzona dla jednej osoby lub zespołu do hostowania muzyki i bycia online w każdej chwili",
+        "description": "Platforma muzyczna stworzona dla jednej osoby lub zespołu muzycznego do hostowania muzyki",
         "github": "https://github.com/Dmytro8/beat-client"
       },
       {
         "name": "Beerguru",
-        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Aplikacja, która została stworzona w celu rozwoju zawodowego, aby nauczyć się i przetestować nowe rzeczy",
         "github": "https://github.com/Dmytro8/beerguru"
       },
       {
         "name": "Personal webpage",
-        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Osobista strona internetowa, którą stworzyłem, aby dzielić się z Wami swoimi projekty",
         "github": "https://github.com/Dmytro8/PersonalWebpage"
       },
       {
         "name": "Chat app",
-        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Aplikacja czasu rzeczywistego, stworzona do udostępniania wiadomości i utrzymywania kontaktu ze znajomymi",
         "github": "https://github.com/Dmytro8/Chatty"
       }
     ],
@@ -68,5 +68,15 @@
     "messagePlaceholder": "Powiadomienie",
     "messageInputTitle": "Wpisz swoje powiadomienie",
     "button": "Wyślij"
+  },
+  "dialog": {
+    "titleSuccess": "Dziękuję za kontakt!",
+    "titleFailed": "Przepraszam, wystąpił błąd podczas przesyłania.",
+    "contentSuccess": "Otrzymałem Twój list i wkrótce spróbuję się z Tobą skontaktować!",
+    "contentFailed": "Proszę o kontakt mailowy lub telefoniczny:",
+    "wish": "Miłego dnia!",
+    "email": "dm.patalakha@gmail.com",
+    "phone": "+48511711068",
+    "back": "Powrót do strony"
   }
 }

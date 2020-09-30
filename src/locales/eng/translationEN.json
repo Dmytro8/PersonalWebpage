@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "I am organized and communicative person with a desire to work with people from all over the world. I am passionate about my work. Because I love what I do, I have a steady source of motivation that drives me to do my best. ",
+    "description": "I am organized and communicative person, having a desire to work with people from all over the world. I value honesty and responsibility and I expect the same from others. Nothing is impossible for me, some things just may take more time and effort. Web developing and web design are my passion. It is my infinity source of motivation and I hope it will help me to achieve all the highs.",
     "need": "Need more information about my skills? Download the CV.",
     "button": "Download CV"
   },
@@ -28,22 +28,22 @@
       },
       {
         "name": "Beat",
-        "description": "Music platform, created for one person or music band to host music and be online everyday",
+        "description": "Music platform, created for one person or music band to host music",
         "github": "https://github.com/Dmytro8/beat-client"
       },
       {
         "name": "Beerguru",
-        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Application, which was created for professional development, just to learn and test new things",
         "github": "https://github.com/Dmytro8/beerguru"
       },
       {
         "name": "Personal webpage",
-        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Personal webpage, which I created to share my projects with You",
         "github": "https://github.com/Dmytro8/PersonalWebpage"
       },
       {
-        "name": "Chat app",
-        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "name": "Chatty",
+        "description": "Real time application, created to share the messanges and be in touch with your friends",
         "github": "https://github.com/Dmytro8/Chatty"
       }
     ],
@@ -51,7 +51,7 @@
   },
   "contact": {
     "title": "Contact",
-    "description": "Are you working on something great? I would love to help make it happen! Drop me a letter and start your project right now! Just do it.",
+    "description": "Are you working on something great? I would love to help make it happen! Drop me a letter and start your project right now!",
     "addressTitle": "Address",
     "address": "Cracow, Poland",
     "phoneTitle": "Phone",
@@ -68,5 +68,15 @@
     "messagePlaceholder": "Message",
     "messageInputTitle": "Enter your message",
     "button": "Send"
+  },
+  "dialog": {
+    "titleSuccess": "Thank you for getting in touch!",
+    "titleFailed": "Sorry, an error occurred during the submit process.",
+    "contentSuccess": "I received your letter and will try to get back in touch with you soon!",
+    "contentFailed": "Please, contact me via email or phone:",
+    "wish": "Have a great day!",
+    "email": "dm.patalakha@gmail.com",
+    "phone": "+48511711068",
+    "back": "Back to the page"
   }
 }

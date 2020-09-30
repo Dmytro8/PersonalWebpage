@@ -14,7 +14,7 @@
   },
   "about": {
     "title": "Обо мне",
-    "description": "Я человек со страстью к компьютерным технологиям и желанием работать с людьми со всего мира. Я фронтенд-разработчик, которому нравится изучать новые вещи и применять их на практике. Мое краткое самоописание - целеустремленный и ответственный человек с большими целями.",
+    "description": "Я организованный и коммуникативный человек, который стремится работать с людьми со всего мира. Я ценю честность и ответственность и этого жду от других. Для меня нет ничего невозможного, некоторые вещи просто могут занять больше времени и усилий. Разработка веб-страниц - это моя страсть. Это мое бесконечное источник мотивации, и я надеюсь, это поможет мне достичь всех высот.",
     "need": "Нужна дополнительная информация о моих навыках? Скачай резюме.",
     "button": "Резюме"
   },
@@ -28,22 +28,22 @@
       },
       {
         "name": "Beat",
-        "description": "Созданная для одного человека или группы, чтобы размещать музыку и быть онлайн в любой момент",
+        "description": "Музыкальная платформа, созданная для одного человека или музыкальной группы, чтобы транслировать музыку",
         "github": "https://github.com/Dmytro8/beat-client"
       },
       {
         "name": "Beerguru",
-        "description": "Beerguru Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Приложение, созданное для профессионального развития, для обучения и тестирования нового.",
         "github": "https://github.com/Dmytro8/beerguru"
       },
       {
         "name": "Personal webpage",
-        "description": "Personal webpage Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Персональная страница, которую я создал, чтобы делиться с Вами своими проектами",
         "github": "https://github.com/Dmytro8/PersonalWebpage"
       },
       {
         "name": "Chat app",
-        "description": "Chat app Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "description": "Приложение в реальном времени, созданное для обмена сообщениями и связи с друзьями.",
         "github": "https://github.com/Dmytro8/Chatty"
       }
     ],
@@ -51,7 +51,7 @@
   },
   "contact": {
     "title": "Контакт",
-    "description": "Вы работаете над чем-то большим? Я хотел бы помочь в этом! Напишите мне письмо и начните свой проект прямо сейчас! Просто сделайте это.",
+    "description": "Вы работаете над чем-то замечательным? Я хотел бы помочь в этом! Напишите мне письмо и начните свой проект прямо сейчас!",
     "addressTitle": "Адрес",
     "address": "Краков, Польша",
     "phoneTitle": "Телефон",
@@ -68,5 +68,15 @@
     "messagePlaceholder": "Сообщение",
     "messageInputTitle": "Введите ваше сообщение",
     "button": "Отправить"
+  },
+  "dialog": {
+    "titleSuccess": "Спасибо, что связались!",
+    "titleFailed": "К сожалению, во время отправки произошла ошибка.",
+    "contentSuccess": "Я получил Ваше письмо и постараюсь в ближайшее время с Вами связаться!",
+    "contentFailed": "Пожалуйста, свяжитесь со мной по электронной почте или по телефону:",
+    "wish": "Хорошего дня!",
+    "email": "dm.patalakha@gmail.com",
+    "phone": "+48511711068",
+    "back": "Вернуться на страницу"
   }
 }
