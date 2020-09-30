@@ -14,7 +14,7 @@ export const GlobalStyles = createGlobalStyle`
   *{
     padding: 0;
     margin: 0;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Exo 2', sans-serif !important;
     scrollbar-width: thin;
     scrollbar-color: ${(props: GlobalStylesType) =>
       `${props.theme.accent} ${props.theme.body}`};
