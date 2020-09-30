@@ -1,13 +1,18 @@
 import React, { FC } from "react";
-import Dialog from "@material-ui/core/Dialog";
+import { useTranslation } from "react-i18next";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ErrorIcon from "@material-ui/icons/Error";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Slide from "@material-ui/core/Slide";
 import { TransitionProps } from "@material-ui/core/transitions";
-import { DialogActions, DialogIcon, DialogLink } from "./DialogOnSend.styled";
+import {
+  DialogActions,
+  DialogContainer,
+  DialogGetBack,
+  DialogIcon,
+  DialogLink
+} from "./DialogOnSend.styled";
 import { DialogContent, DialogContentText } from "@material-ui/core";
-import { Button } from "../Button";
 
 const Transition = React.forwardRef(function Transition(
   props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -26,9 +31,10 @@ const DialogOnSend: FC<DialogOnSend> = ({
   handleClose,
   isFormSuccess
 }) => {
+  const { t } = useTranslation();
   return (
     <div>
-      <Dialog
+      <DialogContainer
         open={open}
         TransitionComponent={Transition}
         keepMounted
@@ -38,37 +44,39 @@ const DialogOnSend: FC<DialogOnSend> = ({
           {isFormSuccess ? <CheckCircleIcon /> : <ErrorIcon />}
         </DialogIcon>
         <DialogTitle>
-          {isFormSuccess
-            ? "Thank you for getting in touch!"
-            : "Sorry, an error occurred during the submit process."}
+          {isFormSuccess ? t("dialog.titleSuccess") : t("dialog.titleFailed")}
         </DialogTitle>
         <DialogContent>
-          <DialogContentText>
+          <DialogContentText color="inherit">
             {isFormSuccess
-              ? "I appreciate you contacting me. I will get back in touch with you soon!"
-              : "Please, contact me via email or phone:"}
+              ? t("dialog.contentSuccess")
+              : t("dialog.contentFailed")}
           </DialogContentText>
           {isFormSuccess ? (
-            <DialogContentText>Have a great day!</DialogContentText>
+            <DialogContentText color="inherit">
+              {t("dialog.wish")}
+            </DialogContentText>
           ) : (
             <>
               <DialogContentText>
-                <DialogLink href="mailto:dm.patalakha@gmail.com">
-                  dm.patalakha@gmail.com
+                <DialogLink href={`mailto:${t("dialog.email")}`}>
+                  {t("dialog.email")}
                 </DialogLink>
               </DialogContentText>
               <DialogContentText>
-                <DialogLink href="tel:+48511711068">
-                  +48&nbsp;511&nbsp;711&nbsp;068
+                <DialogLink href={`tel:${t("dialog.phone")}`}>
+                  {t("dialog.phone")}
                 </DialogLink>
               </DialogContentText>
             </>
           )}
         </DialogContent>
         <DialogActions>
-          <Button text="Back to the page" size="small" onClick={handleClose} />
+          <DialogGetBack onClick={handleClose}>
+            {t("dialog.back")}
+          </DialogGetBack>
         </DialogActions>
-      </Dialog>
+      </DialogContainer>
     </div>
   );
 };

@@ -51,7 +51,7 @@ export const AboutSectionText = styled(motion.p)`
 `;
 
 export const AboutSectionSignature = styled(motion.p)`
-  font-family: "Dancing Script", cursive;
+  font-family: "Dancing Script", cursive !important;
   font-size: 48px;
   line-height: 58px;
   margin-top: 30px;

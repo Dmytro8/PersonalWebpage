@@ -22,7 +22,7 @@ export const useDarkMode = (): ["dark" | "light", () => void] => {
       // @ts-ignore
       setTheme(localTheme);
     } else {
-      setMode("light");
+      setMode("dark");
     }
   }, []);
 

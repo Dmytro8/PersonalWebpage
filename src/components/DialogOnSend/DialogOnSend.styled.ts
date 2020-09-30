@@ -1,4 +1,13 @@
 import styled from "styled-components";
+import Dialog from "@material-ui/core/Dialog";
+
+export const DialogContainer = styled(Dialog)`
+  & .MuiPaper-root {
+    background-color: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text} !important;
+    text-align: center;
+  }
+`;
 
 type DialogIconProps = {
   isFormSuccess: boolean;
@@ -18,6 +27,10 @@ export const DialogActions = styled.div`
   justify-content: center;
 `;
 
-export const DialogLink = styled.a`
-  color: #000000de;
+export const DialogLink = styled.a``;
+
+export const DialogGetBack = styled.p`
+  font-size: 18px;
+  cursor: pointer;
+  text-decoration: underline;
 `;
