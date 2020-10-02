@@ -5,7 +5,6 @@ export const AboutSectionContainer = styled.section`
   display: grid;
   justify-content: center;
   align-items: start;
-  grid-template-rows: 3fr 1fr;
   gap: 100px;
 
   @media screen and (max-width: 800px) {
@@ -18,10 +17,12 @@ export const AboutSectionContainer = styled.section`
 
 export const AboutSectionDescription = styled(InnerContainer)`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(350px, 1fr) 1fr;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
   @media screen and (max-width: 800px) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
   }
 `;
 
@@ -33,7 +34,21 @@ export const AboutSectionMore = styled(InnerContainer)`
   }
 `;
 
-export const AboutSectionMe = styled(motion.div)``;
+export const AboutSectionMe = styled(motion.div)`
+  img {
+    width: 85%;
+    object-fit: contain;
+  }
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    display: block;
+    text-align: center;
+  }
+`;
+
+export const AboutSectioImg = styled(motion.img)``;
 
 export const AboutSectionContent = styled.div`
   display: grid;

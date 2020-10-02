@@ -12,11 +12,13 @@ import {
   AboutSectionText,
   AboutSectionSignature,
   AboutSectionMoreText,
-  AboutSectionDownload
+  AboutSectionDownload,
+  AboutSectioImg
 } from "./AboutSection.styled";
 import { Title } from "../../components/Title";
 import { Button } from "../../components/Button";
 import CV from "../../static/CV_Patalakha_Dmytro.pdf";
+import me from "../../static/me.png";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -31,37 +33,41 @@ const AboutSection = () => {
   return (
     <AboutSectionContainer id="about">
       <AboutSectionDescription>
-        <AboutSectionMe
-          ref={ref}
-          animate={controls}
-          initial="hidden"
-          variants={opacityVariants}
-        ></AboutSectionMe>
-        <AboutSectionContent>
-          <Title title={t("about.title")} size="big" />
-          <AboutSectionText
+        <AboutSectionMe>
+          <AboutSectioImg
             ref={ref}
             animate={controls}
             initial="hidden"
             variants={opacityVariants}
+            src={me}
+            alt="me"
+          />
+        </AboutSectionMe>
+        <AboutSectionContent>
+          <Title title={t("about.title")} size="big" />
+          <AboutSectionText
+          // ref={ref}
+          // animate={controls}
+          // initial="hidden"
+          // variants={opacityVariants}
           >
             {t("about.description")}
           </AboutSectionText>
           <AboutSectionSignature
-            ref={ref}
-            animate={controls}
-            initial="hidden"
-            variants={opacityVariants}
+          // ref={ref}
+          // animate={controls}
+          // initial="hidden"
+          // variants={opacityVariants}
           >
             Dmytro
           </AboutSectionSignature>
         </AboutSectionContent>
       </AboutSectionDescription>
       <AboutSectionMore
-        ref={ref}
-        animate={controls}
-        initial="hidden"
-        variants={opacityVariants}
+      // ref={ref}
+      // animate={controls}
+      // initial="hidden"
+      // variants={opacityVariants}
       >
         <AboutSectionMoreText>{t("about.need")}</AboutSectionMoreText>
         <Button text="Download CV" size="medium">
