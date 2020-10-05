@@ -1,6 +1,14 @@
 ## Dmytro Patalakha | Personal webpage
 
-The project use the React library
+I welcome you here. This repository contains my webpage.
+The project written in React with Typescript.
 
-### The page is in development
+## Tech stack
+  - HTML
+  - CSS
+  - Styled components
+  - Typescript
+  - React
+  - Hooks
+
 
