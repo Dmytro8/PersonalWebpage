@@ -14,7 +14,8 @@ import {
   ProjectDescription,
   ProjectName,
   ProjectAbout,
-  ProjectView
+  ProjectView,
+  ButtonsContainer
 } from "./PortfolioSection.styled";
 import { Title } from "../../components/Title";
 
@@ -100,14 +101,24 @@ const PortfolioSection = () => {
           <ProjectAbout>
             {t(`portfolio.project.${projectIndex}.description`)}
           </ProjectAbout>
-          <Button text="View Project" size="medium">
-            <ProjectView
-              href={t(`portfolio.project.${projectIndex}.github`)}
-              target="_blank"
-            >
-              {t(`portfolio.button`)}
-            </ProjectView>
-          </Button>
+          <ButtonsContainer>
+            <Button text="View Project" size="medium">
+              <ProjectView
+                href={t(`portfolio.project.${projectIndex}.webpage`)}
+                target="_blank"
+              >
+                {t(`portfolio.buttonView`)}
+              </ProjectView>
+            </Button>
+            <Button text="View Code" size="medium">
+              <ProjectView
+                href={t(`portfolio.project.${projectIndex}.github`)}
+                target="_blank"
+              >
+                {t(`portfolio.buttonCode`)}
+              </ProjectView>
+            </Button>
+          </ButtonsContainer>
         </ProjectDescription>
       </PorfolioSectionContainer>
     </PortfolioSectionBody>

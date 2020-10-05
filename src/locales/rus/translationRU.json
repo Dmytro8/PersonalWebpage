@@ -24,30 +24,36 @@
       {
         "name": "Barbershop",
         "description": "Одностраничное приложение, созданное для успешного парикмахерского бизнеса",
-        "github": "https://github.com/Dmytro8/BarberShop"
+        "github": "https://github.com/Dmytro8/BarberShop",
+        "webpage": "https://dmytro8.github.io/BarberShop/"
       },
       {
         "name": "Beat",
         "description": "Музыкальная платформа, созданная для одного человека или музыкальной группы, чтобы транслировать музыку",
-        "github": "https://github.com/Dmytro8/beat-client"
+        "github": "https://github.com/Dmytro8/beat-client",
+        "webpage": "https://dev-beat.web.app/"
       },
       {
         "name": "Beerguru",
         "description": "Приложение, созданное для профессионального развития, для обучения и тестирования нового.",
-        "github": "https://github.com/Dmytro8/beerguru"
+        "github": "https://github.com/Dmytro8/beerguru",
+        "webpage": "https://beerguru-app.herokuapp.com/"
       },
       {
         "name": "Personal webpage",
         "description": "Персональная страница, которую я создал, чтобы делиться с Вами своими проектами",
-        "github": "https://github.com/Dmytro8/PersonalWebpage"
+        "github": "https://github.com/Dmytro8/PersonalWebpage",
+        "webpage": "https://dmytrodev.netlify.app/"
       },
       {
         "name": "Chat app",
         "description": "Приложение в реальном времени, созданное для обмена сообщениями и связи с друзьями.",
-        "github": "https://github.com/Dmytro8/Chatty"
+        "github": "https://github.com/Dmytro8/Chatty",
+        "webpage": "https://chatty-app-1.web.app/"
       }
     ],
-    "button": "Посмотреть"
+    "buttonCode": "Github",
+    "buttonView": "Посмотреть"
   },
   "contact": {
     "title": "Контакт",

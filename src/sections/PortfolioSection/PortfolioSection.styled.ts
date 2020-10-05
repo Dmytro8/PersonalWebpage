@@ -90,8 +90,20 @@ export const ProjectAbout = styled.p`
   }
 `;
 
+export const ButtonsContainer = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+  @media screen and (max-width: 450px) {
+    grid-auto-flow: row;
+    justify-items: center;
+  }
+`;
+
 export const ProjectView = styled.a`
   text-decoration: none;
   color: ${({ theme }) => theme.body};
   padding: 1.4rem 3rem;
 `;
+
+export const CodeView = styled(ProjectView)``;
