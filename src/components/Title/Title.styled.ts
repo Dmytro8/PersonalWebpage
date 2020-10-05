@@ -5,7 +5,8 @@ type TitleTextProps = {
   size: "small" | "big";
 };
 export const TitleText = styled(motion.p)<TitleTextProps>`
-  font-size: ${({ size }) => (size === "small" ? "32px" : "48px")};
+  font-size: ${({ size }) =>
+    size === "small" ? "calc(20px + 2vw)" : "calc(28px + 3vw)"};
   color: ${({ theme }) => theme.text};
   display: grid;
   grid-auto-flow: column;

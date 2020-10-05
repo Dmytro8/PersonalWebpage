@@ -18,13 +18,12 @@ import {
 } from "./PortfolioSection.styled";
 import { Title } from "../../components/Title";
 
-import barberShopImg from "../../static/portfolio/project1.png";
-import beatImg from "../../static/portfolio/project2.png";
-import personalImg from "../../static/portfolio/project3.png";
-import beerImg from "../../static/portfolio/project4.png";
-import chattyImg from "../../static/portfolio/project5.png";
+import barberShopImg from "../../static/portfolio/project1.webp";
+import beatImg from "../../static/portfolio/project2.webp";
+import personalImg from "../../static/portfolio/project3.webp";
+import beerImg from "../../static/portfolio/project4.webp";
+import chattyImg from "../../static/portfolio/project5.webp";
 
-// import { projects } from "./projects.data";
 import { Button } from "../../components/Button";
 import { opacityVariants } from "../../styles/animation";
 

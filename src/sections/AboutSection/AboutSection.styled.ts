@@ -40,11 +40,10 @@ export const AboutSectionMe = styled(motion.div)`
     object-fit: contain;
   }
   @media screen and (max-width: 1024px) {
-    display: none;
+    text-align: center;
   }
   @media screen and (max-width: 800px) {
     display: block;
-    text-align: center;
   }
 `;
 

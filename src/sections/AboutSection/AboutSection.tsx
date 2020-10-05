@@ -18,7 +18,7 @@ import {
 import { Title } from "../../components/Title";
 import { Button } from "../../components/Button";
 import CV from "../../static/CV_Patalakha_Dmytro.pdf";
-import me from "../../static/me.png";
+import me from "../../static/me.webp";
 
 const AboutSection = () => {
   const { t } = useTranslation();
