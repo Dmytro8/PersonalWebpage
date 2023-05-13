@@ -17,6 +17,7 @@ import { opacityVariants } from "../../styles/animation";
 type ContactSectionProps = {
   theme: "dark" | "light";
 };
+
 const ContactSection: FC<ContactSectionProps> = ({ theme }) => {
   const { t } = useTranslation();
   const controls = useAnimation();
@@ -38,10 +39,6 @@ const ContactSection: FC<ContactSectionProps> = ({ theme }) => {
           >
             <ContactTitle>{t("contact.title")}</ContactTitle>
             <ContactText main={false}>{t("contact.description")}</ContactText>
-            <ContactText main={true}>{t("contact.addressTitle")}</ContactText>
-            <ContactText main={false}>{t("contact.address")}</ContactText>
-            <ContactText main={true}>{t("contact.phoneTitle")}</ContactText>
-            <ContactText main={false}>{t("contact.phone")}</ContactText>
             <ContactText main={true}>{t("contact.emailTitle")}</ContactText>
             <ContactText main={false}>{t("contact.email")}</ContactText>
           </ContactAddress>

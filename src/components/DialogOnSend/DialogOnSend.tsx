@@ -63,11 +63,6 @@ const DialogOnSend: FC<DialogOnSend> = ({
                   {t("dialog.email")}
                 </DialogLink>
               </DialogContentText>
-              <DialogContentText>
-                <DialogLink href={`tel:${t("dialog.phone")}`}>
-                  {t("dialog.phone")}
-                </DialogLink>
-              </DialogContentText>
             </>
           )}
         </DialogContent>

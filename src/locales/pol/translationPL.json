@@ -58,10 +58,6 @@
   "contact": {
     "title": "Kontakt",
     "description": "Pracujesz nad czymś wspaniałym? Bardzo chciałbym pomóc w tym! Napisz do mnie i rozpocznij swój projekt już teraz!",
-    "addressTitle": "Adres",
-    "address": "Kraków, Poland",
-    "phoneTitle": "Telefon",
-    "phone": "+48 511 711 068",
     "emailTitle": "E-mail",
     "email": "dm.patalakha@gmail.com",
     "formTitle": "Forma",
@@ -82,7 +78,6 @@
     "contentFailed": "Proszę o kontakt mailowy lub telefoniczny:",
     "wish": "Miłego dnia!",
     "email": "dm.patalakha@gmail.com",
-    "phone": "+48511711068",
     "back": "Powrót do strony"
   }
 }

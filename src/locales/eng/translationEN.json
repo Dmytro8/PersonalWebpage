@@ -58,10 +58,6 @@
   "contact": {
     "title": "Contact",
     "description": "Are you working on something great? I would love to help make it happen! Drop me a letter and start your project right now!",
-    "addressTitle": "Address",
-    "address": "Cracow, Poland",
-    "phoneTitle": "Phone",
-    "phone": "+48 511 711 068",
     "emailTitle": "E-mail",
     "email": "dm.patalakha@gmail.com",
     "formTitle": "Form",
@@ -82,7 +78,6 @@
     "contentFailed": "Please, contact me via email or phone:",
     "wish": "Have a great day!",
     "email": "dm.patalakha@gmail.com",
-    "phone": "+48511711068",
     "back": "Back to the page"
   }
 }
